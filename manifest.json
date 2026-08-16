@@ -1,0 +1,40 @@
+{
+  "manifest_version": "0.2",
+  "name": "mcpie",
+  "display_name": "mcpie — the pizza button",
+  "version": "0.1.1",
+  "description": "Order your usual Domino's: dry-run freely, place only on explicit confirmation. Cash at pickup, no card data ever.",
+  "long_description": "The standing-order pizza button. Define your usual order once in ~/.config/mcpie/config.toml (see the repo's config.example.toml), then Claude can check the store, list coupons, price the order — and place it only after you explicitly say so. Payment is always cash at pickup/delivery; no card data exists anywhere in this package. Unofficial Domino's API, US/Canada only, must run from a residential connection (automatic when running locally). Requires uv (https://docs.astral.sh/uv/).",
+  "author": {
+    "name": "SuperAngryMonkey",
+    "url": "https://github.com/SuperAngryMonkey"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SuperAngryMonkey/mcpie"
+  },
+  "homepage": "https://github.com/SuperAngryMonkey/mcpie",
+  "license": "MIT",
+  "keywords": ["pizza", "dominos", "food", "standing-order"],
+  "server": {
+    "type": "binary",
+    "entry_point": "",
+    "mcp_config": {
+      "command": "uvx",
+      "args": ["mcpie-pizza==0.1.1"],
+      "env": {}
+    }
+  },
+  "user_config": {
+    "config_path": {
+      "type": "string",
+      "title": "Config file path",
+      "description": "Path to your mcpie config TOML (leave default unless you keep it elsewhere)",
+      "default": "${HOME}/.config/mcpie/config.toml",
+      "required": false
+    }
+  },
+  "compatibility": {
+    "platforms": ["darwin", "linux", "win32"]
+  }
+}

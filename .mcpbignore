@@ -1,0 +1,10 @@
+.venv/
+.git/
+.github/
+dist/
+build/
+src/
+__pycache__/
+*.mcpb
+server.json
+pyproject.toml
