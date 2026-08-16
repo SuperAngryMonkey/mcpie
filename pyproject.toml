@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pizza-button"
+name = "mcpie-pizza"
 version = "0.1.0"
 description = "The standing-order pizza button: an MCP server that orders your usual Domino's. Cash at pickup, hard confirmation gate, no card data ever."
 readme = "README.md"
@@ -32,7 +32,7 @@ Issues = "https://github.com/SuperAngryMonkey/mcpie/issues"
 
 [project.scripts]
 mcpie = "mcpie.server:main"
-pizza-button = "mcpie.server:main"
+mcpie-pizza = "mcpie.server:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/mcpie"]
