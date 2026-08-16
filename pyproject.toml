@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mcpie-pizza"
-version = "0.1.0"
+version = "0.1.1"
 description = "The standing-order pizza button: an MCP server that orders your usual Domino's. Cash at pickup, hard confirmation gate, no card data ever."
 readme = "README.md"
 license = "MIT"

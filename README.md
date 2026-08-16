@@ -105,3 +105,7 @@ way in production. Prior art respectfully acknowledged:
 full cart-building approach; mcpie deliberately goes the other way.
 
 MIT licensed. PRs welcome, especially Canada testing.
+
+---
+
+<sub>mcp-name: io.github.SuperAngryMonkey/mcpie</sub>

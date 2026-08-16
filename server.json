@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.SuperAngryMonkey/mcpie",
+  "description": "The standing-order pizza button. Orders your usual Domino's: configure once, dry-run freely, place only on explicit confirmation. Cash at pickup, no card data ever. US/CA, unofficial API, runs locally.",
+  "repository": {
+    "url": "https://github.com/SuperAngryMonkey/mcpie",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "mcpie-pizza",
+      "version": "0.1.1",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "description": "Optional path to the mcpie config TOML (defaults to ~/.config/mcpie/config.toml)",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": false,
+          "name": "MCPIE_CONFIG"
+        }
+      ]
+    }
+  ]
+}
