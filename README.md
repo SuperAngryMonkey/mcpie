@@ -33,15 +33,21 @@ Claude: [pizza_order confirm=true coupon=9204] Order 1042 placed.
 ## Install
 
 ```bash
-uv tool install mcpie        # or: pipx install mcpie / pip install mcpie
+uv tool install pizza-button   # or: pipx install pizza-button / pip install pizza-button
 ```
+
+> **Why is the package called `pizza-button`?** PyPI's anti-typosquatting
+> filter blocks anything starting with "mcpie" (too close to the venerable
+> `mcpi` Minecraft library). So: the project is **mcpie**, the PyPI
+> distribution is **`pizza-button`**, and both `mcpie` and `pizza-button`
+> work as commands once installed. Same pie, different box.
 
 Claude Desktop (`claude_desktop_config.json`):
 
 ```json
 {
   "mcpServers": {
-    "mcpie": { "command": "uvx", "args": ["mcpie"] }
+    "mcpie": { "command": "uvx", "args": ["pizza-button"] }
   }
 }
 ```
