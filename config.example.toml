@@ -1,0 +1,30 @@
+# mcpie configuration — copy to ~/.config/mcpie/config.toml and fill in.
+# This file is the ONLY place your info lives. It never leaves your machine.
+
+country = "us"            # "us" or "ca"
+store_id = "0000"         # run the pizza_find_store tool to discover yours
+service_method = "Carryout"   # "Carryout" (recommended) or "Delivery"
+
+[customer]
+first = "First"
+last = "Last"
+email = "you@example.com"
+phone = "3055551234"      # digits only
+
+[address]
+street = "123 Main St"
+city = "Anytown"
+region = "FL"
+zip = "33301"
+
+# Your usual. One or more items. Find product codes with the pizza_menu
+# tool (e.g. pizza_menu("pan")), and topping codes the same way.
+# Option format: { "<side>" = "<portion>" } where side "1/1" = whole pizza,
+# portion "1.0" = normal, "1.5" = extra, "0.5" = light.
+[[items]]
+code = "P12IPAZA"         # Medium (12") Handmade Pan
+label = "Medium Handmade Pan — Ham & Pineapple"
+qty = 1
+[items.options]
+H = { "1/1" = "1.0" }     # Ham, whole pizza, normal portion
+N = { "1/1" = "1.0" }     # Pineapple, whole pizza, normal portion
