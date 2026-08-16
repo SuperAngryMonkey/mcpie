@@ -19,6 +19,7 @@ from __future__ import annotations
 from datetime import datetime
 
 from mcp.server.fastmcp import FastMCP
+from mcp.types import ToolAnnotations
 
 from . import dominos
 from .config import ConfigError, config_path, load
@@ -36,7 +37,7 @@ def _cfg_or_error():
         return None, {"ok": False, "error": str(e)}
 
 
-@mcp.tool()
+@mcp.tool(annotations=ToolAnnotations(title="Pizza status", readOnlyHint=True, openWorldHint=True))
 def pizza_status() -> dict:
     """Liveness + configuration check: is mcpie configured, what is the
     standing order, is the configured Domino's store reachable, and was
@@ -57,7 +58,7 @@ def pizza_status() -> dict:
     }
 
 
-@mcp.tool()
+@mcp.tool(annotations=ToolAnnotations(title="Find nearby stores", readOnlyHint=True, openWorldHint=True))
 def pizza_find_store() -> dict:
     """List the nearest Domino's stores for the configured address, with
     their store IDs — for first-time setup, to pick the store_id that goes
@@ -71,7 +72,7 @@ def pizza_find_store() -> dict:
         return {"ok": False, "error": str(e)}
 
 
-@mcp.tool()
+@mcp.tool(annotations=ToolAnnotations(title="Search store menu", readOnlyHint=True, openWorldHint=True))
 def pizza_menu(query: str) -> dict:
     """Search the configured store's live menu for product and topping
     codes matching a term (e.g. 'pan', 'pepperoni'). Use this to find the
@@ -85,7 +86,7 @@ def pizza_menu(query: str) -> dict:
         return {"ok": False, "error": str(e)}
 
 
-@mcp.tool()
+@mcp.tool(annotations=ToolAnnotations(title="List coupons", readOnlyHint=True, openWorldHint=True))
 def pizza_specials() -> dict:
     """List live coupons valid for the configured service method at the
     configured store, cheapest first. Read-only — never applies anything.
@@ -100,7 +101,7 @@ def pizza_specials() -> dict:
         return {"ok": False, "error": str(e)}
 
 
-@mcp.tool()
+@mcp.tool(annotations=ToolAnnotations(title="Price the standing order (dry run)", readOnlyHint=True, openWorldHint=True))
 def pizza_dryrun(coupon: str = "") -> dict:
     """Validate and price the standing order WITHOUT placing it.
     Optionally attach a coupon code (see pizza_specials) to test whether
@@ -119,7 +120,7 @@ def pizza_dryrun(coupon: str = "") -> dict:
         return {"ok": False, "coupon": coupon or None, "error": str(e)}
 
 
-@mcp.tool()
+@mcp.tool(annotations=ToolAnnotations(title="PLACE REAL ORDER", readOnlyHint=False, destructiveHint=True, idempotentHint=False, openWorldHint=True))
 def pizza_order(confirm: bool = False, coupon: str = "") -> dict:
     """PLACE THE REAL ORDER: the standing order defined in the config
     file, at the configured store, cash at pickup/delivery.

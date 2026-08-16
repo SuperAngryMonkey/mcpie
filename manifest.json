@@ -1,10 +1,10 @@
 {
   "manifest_version": "0.2",
   "name": "mcpie",
-  "display_name": "mcpie — the pizza button",
-  "version": "0.1.1",
+  "display_name": "mcpie \u2014 the pizza button",
+  "version": "0.1.2",
   "description": "Order your usual Domino's: dry-run freely, place only on explicit confirmation. Cash at pickup, no card data ever.",
-  "long_description": "The standing-order pizza button. Define your usual order once in ~/.config/mcpie/config.toml (see the repo's config.example.toml), then Claude can check the store, list coupons, price the order — and place it only after you explicitly say so. Payment is always cash at pickup/delivery; no card data exists anywhere in this package. Unofficial Domino's API, US/Canada only, must run from a residential connection (automatic when running locally). Requires uv (https://docs.astral.sh/uv/).",
+  "long_description": "The standing-order pizza button. Define your usual order once in ~/.config/mcpie/config.toml (see the repo's config.example.toml), then Claude can check the store, list coupons, price the order \u2014 and place it only after you explicitly say so. Payment is always cash at pickup/delivery; no card data exists anywhere in this package. Unofficial Domino's API, US/Canada only, must run from a residential connection (automatic when running locally). Requires uv (https://docs.astral.sh/uv/).",
   "author": {
     "name": "SuperAngryMonkey",
     "url": "https://github.com/SuperAngryMonkey"
@@ -15,13 +15,20 @@
   },
   "homepage": "https://github.com/SuperAngryMonkey/mcpie",
   "license": "MIT",
-  "keywords": ["pizza", "dominos", "food", "standing-order"],
+  "keywords": [
+    "pizza",
+    "dominos",
+    "food",
+    "standing-order"
+  ],
   "server": {
     "type": "binary",
     "entry_point": "",
     "mcp_config": {
       "command": "uvx",
-      "args": ["mcpie-pizza==0.1.1"],
+      "args": [
+        "mcpie-pizza==0.1.2"
+      ],
       "env": {}
     }
   },
@@ -35,6 +42,11 @@
     }
   },
   "compatibility": {
-    "platforms": ["darwin", "linux", "win32"]
-  }
+    "platforms": [
+      "darwin",
+      "linux",
+      "win32"
+    ]
+  },
+  "icon": "icon.png"
 }
