@@ -39,6 +39,15 @@ client you connect it to (e.g. Claude). Store data, prices, and order
 confirmations returned by tools are visible to that client, subject to its
 own privacy policy. Your config file itself is never returned by any tool.
 
+## Data retention
+
+mcpie retains nothing. There is no database, no log file, and no persistent
+state: the only runtime memory is the last order's ID and amount, held in
+process memory and gone when the server stops. Your config file persists
+only because you created it, and deleting it removes everything. Domino's
+retains order data under its own privacy policy, as with any order placed
+through its website.
+
 ## Contact
 
 Questions or concerns: open an issue at

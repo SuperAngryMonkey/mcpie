@@ -48,5 +48,8 @@
       "win32"
     ]
   },
-  "icon": "icon.png"
+  "icon": "icon.png",
+  "privacy_policies": [
+    "https://github.com/SuperAngryMonkey/mcpie/blob/main/PRIVACY.md"
+  ]
 }

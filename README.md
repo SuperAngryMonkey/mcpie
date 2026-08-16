@@ -93,6 +93,13 @@ config"* is a perfectly good first prompt.
 - **A real order is a real order.** Dry-run freely; confirm deliberately.
   The store will make the pizza and expect you to show up with cash.
 
+## Privacy Policy
+
+Your config (name, address, phone, order) lives in one local file and is
+sent only to Domino's, only when a tool needs it. No cards, no telemetry,
+no third parties, nothing retained. Full policy:
+[PRIVACY.md](https://github.com/SuperAngryMonkey/mcpie/blob/main/PRIVACY.md)
+
 ## Lineage
 
 mcpie is the community release of a long-running personal appliance
