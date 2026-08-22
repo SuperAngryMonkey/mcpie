@@ -9,7 +9,7 @@ description = "The standing-order pizza button: an MCP server that orders your u
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
-authors = [{ name = "James B Smith III", email = "james@bigassmonkey.com" }]
+authors = [{ name = "800 Pound Gorilla Inc.", email = "james@bigassmonkey.com" }]
 keywords = ["mcp", "model-context-protocol", "dominos", "pizza", "claude"]
 classifiers = [
     "Development Status :: 4 - Beta",

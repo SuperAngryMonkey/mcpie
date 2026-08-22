@@ -6,7 +6,7 @@
   "description": "Order your usual Domino's: dry-run freely, place only on explicit confirmation. Cash at pickup, no card data ever.",
   "long_description": "The standing-order pizza button. Define your usual order once in ~/.config/mcpie/config.toml (see the repo's config.example.toml), then Claude can check the store, list coupons, price the order \u2014 and place it only after you explicitly say so. Payment is always cash at pickup/delivery; no card data exists anywhere in this package. Unofficial Domino's API, US/Canada only, must run from a residential connection (automatic when running locally). Requires uv (https://docs.astral.sh/uv/).",
   "author": {
-    "name": "James B Smith III",
+    "name": "800 Pound Gorilla Inc.",
     "url": "https://github.com/SuperAngryMonkey"
   },
   "repository": {
