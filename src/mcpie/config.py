@@ -8,7 +8,9 @@ Everything that defines "your usual" lives in one TOML file. Search order:
   3. ./mcpie.toml (current working directory)
 
 No PII ever lives in this package or its repo — only in your local config
-file. See config.example.toml for the full schema.
+file. See config.example.toml for the full schema. Card / gift-card details
+live in a separate payment.toml written by `mcpie setup-payment` (see
+payment.py) — never in this file.
 """
 
 from __future__ import annotations
@@ -57,6 +59,9 @@ class Config:
     addr_zip: str
     items: list[Item]
     user_agent: str = BROWSER_UA
+    addr_type: str = "House"
+    addr_unit: str = ""
+    delivery_store_id: str = ""
 
     @property
     def order_label(self) -> str:
@@ -148,4 +153,7 @@ def load() -> Config:
         addr_region=need(addr, "region", "address"),
         addr_zip=need(addr, "zip", "address"),
         items=items,
+        addr_type=str(addr.get("type") or "House"),
+        addr_unit=str(addr.get("unit") or ""),
+        delivery_store_id=str(raw.get("delivery_store_id") or ""),
     )

@@ -3,7 +3,9 @@
 
 country = "us"            # "us" or "ca"
 store_id = "0000"         # run the pizza_find_store tool to discover yours
-service_method = "Carryout"   # "Carryout" (recommended) or "Delivery"
+service_method = "Carryout"   # default; each call may pass mode="delivery"
+# delivery_store_id = "0000"  # optional: store that delivers to you; auto-resolved if blank
+# Card / gift card: NOT here. Run `mcpie setup-payment` in a terminal.
 
 [customer]
 first = "First"
@@ -16,6 +18,8 @@ street = "123 Main St"
 city = "Anytown"
 region = "FL"
 zip = "33301"
+# type = "House"          # House | Apartment | Business (delivery)
+# unit = ""               # apartment / suite number (delivery)
 
 # Your usual. One or more items. Find product codes with the pizza_menu
 # tool (e.g. pizza_menu("pan")), and topping codes the same way.

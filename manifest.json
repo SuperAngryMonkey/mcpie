@@ -2,9 +2,9 @@
   "manifest_version": "0.2",
   "name": "mcpie",
   "display_name": "mcpie \u2014 the pizza button",
-  "version": "0.1.2",
-  "description": "Order your usual Domino's: dry-run freely, place only on explicit confirmation. Cash at pickup, no card data ever.",
-  "long_description": "The standing-order pizza button. Define your usual order once in ~/.config/mcpie/config.toml (see the repo's config.example.toml), then Claude can check the store, list coupons, price the order \u2014 and place it only after you explicitly say so. Payment is always cash at pickup/delivery; no card data exists anywhere in this package. Unofficial Domino's API, US/Canada only, must run from a residential connection (automatic when running locally). Requires uv (https://docs.astral.sh/uv/).",
+  "version": "0.2.0",
+  "description": "Order your usual Domino's: dry-run freely, place only on explicit confirmation. Cash by default; opt-in delivery and card via a terminal-only setup command.",
+  "long_description": "The standing-order pizza button. Define your usual order once in ~/.config/mcpie/config.toml (see the repo's config.example.toml), then Claude can check the store, list coupons, price the order \u2014 and place it only after you explicitly say so. Payment is cash by default; delivery and card/gift-card payment are opt-in via `mcpie setup-payment` (terminal only, 0600 file, never visible to the assistant). Unofficial Domino's API, US/Canada only, must run from a residential connection (automatic when running locally). Requires uv (https://docs.astral.sh/uv/).",
   "author": {
     "name": "800 Pound Gorilla Inc.",
     "url": "https://github.com/SuperAngryMonkey"
@@ -27,7 +27,7 @@
     "mcp_config": {
       "command": "uvx",
       "args": [
-        "mcpie-pizza==0.1.2"
+        "mcpie-pizza==0.2.0"
       ],
       "env": {}
     }

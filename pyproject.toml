@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mcpie-pizza"
-version = "0.1.2"
-description = "The standing-order pizza button: an MCP server that orders your usual Domino's. Cash at pickup, hard confirmation gate, no card data ever."
+version = "0.2.0"
+description = "The standing-order pizza button: an MCP server that orders your usual Domino's. Cash at pickup by default, optional delivery and card, hard confirmation gate, card never passes through the assistant."
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"

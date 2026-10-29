@@ -1,17 +1,17 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.SuperAngryMonkey/mcpie",
-  "description": "Standing-order Domino's pizza button: dry-run freely, order only on explicit confirm. Cash only.",
+  "description": "Standing-order Domino's pizza button: dry-run freely, order on explicit confirm. Cash default.",
   "repository": {
     "url": "https://github.com/SuperAngryMonkey/mcpie",
     "source": "github"
   },
-  "version": "0.1.2",
+  "version": "0.2.0",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "mcpie-pizza",
-      "version": "0.1.2",
+      "version": "0.2.0",
       "runtimeHint": "uvx",
       "transport": {
         "type": "stdio"
